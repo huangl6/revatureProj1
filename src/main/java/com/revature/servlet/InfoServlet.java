@@ -53,6 +53,7 @@ public class InfoServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("qweqwe");
 		response.setContentType("text/html");
 		PrintWriter pw1 = response.getWriter();
 		String name = request.getParameter("name");
