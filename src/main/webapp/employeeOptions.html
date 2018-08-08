@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Options</title>
+</head>
+<body>
+	<h2>Welcome!</h2>
+	<button onclick="showSubmitRequest()">Submit a Request</button><br>
+	<button onclick="showViewRequest()">View My Requests</button><br>
+	<button onclick="showViewInfo()">View Information</button><br>
+	<button onclick="showUpdateInfo()">Update Information</button><br>
+	<form action = "/ERSProject/login.html">
+		<input type="submit" value="Logout">
+	</form>
+	<div id="panel"></div>
+</body>
+<script>
+function showSubmitRequest() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("panel").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "/ERSProject/submitRequest.html", true);
+	  xhttp.send();
+}
+
+function showViewRequest() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("panel").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "/ERSProject/viewRequest.html", true);
+	  xhttp.send();
+}
+	
+function showViewInfo() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("panel").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "/ERSProject/viewInfo.html", true);
+	  xhttp.send();
+}
+	
+function showUpdateInfo() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("panel").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "/ERSProject/submitInfo.html", true);
+	  xhttp.send();
+}
+</script>
+</html>
