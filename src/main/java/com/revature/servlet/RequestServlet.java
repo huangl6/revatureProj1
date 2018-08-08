@@ -44,7 +44,7 @@ public class RequestServlet extends HttpServlet {
 				pw1.println("<tr><td>" + req.getRequestID() + "</td><td>" + req.getAmount() + "</td><td>" +  
 					req.getReason() + "</td><td>" + reqStatus + "</td><td>" + req.getEmpID() + "</td></tr>");
 			}
-			pw1.println("</div><br><a href='/ERSProject/managerOptions.html'>Go back.</a>");
+			pw1.println("</div><br><a href='/revatureProj1/managerOptions.html'>Go back.</a>");
 		} 
 		else if (request.getParameter("addEmployee") != null) {
 			response.setContentType("text/html");
@@ -56,10 +56,10 @@ public class RequestServlet extends HttpServlet {
 			boolean adder = ERSService.getERSService().addEmployee(e);
 			PrintWriter pw1 = response.getWriter();
 			if (adder == true) {
-				pw1.println("</div><br>Success! <a href='/ERSProject/managerOptions.html'>Go back.</a>");
+				pw1.println("</div><br>Success! <a href='/revatureProj1/managerOptions.html'>Go back.</a>");
 			}
 			else {
-				pw1.println("</div><br>Success! <a href='/ERSProject/managerOptions.html'>Go back.</a>");
+				pw1.println("</div><br>Success! <a href='/revatureProj1/managerOptions.html'>Go back.</a>");
 			}
 		}
 		else if (request.getParameter("changeReqStatus") != null) {
@@ -69,7 +69,7 @@ public class RequestServlet extends HttpServlet {
 			int resolved = Integer.parseInt(request.getParameter("resolved"));
 			int reqId = Integer.parseInt(request.getParameter("reqID"));
 			ers.changeReqStatus(resolved, reqId);
-			pw1.println("</div><br>Success! <a href='/ERSProject/managerOptions.html'>Go back.</a>");
+			pw1.println("</div><br>Success! <a href='/revatureProj1/managerOptions.html'>Go back.</a>");
 		}
 		else {
 			response.setContentType("text/html");
@@ -94,7 +94,7 @@ public class RequestServlet extends HttpServlet {
 				pw1.println("<tr><td>" + req.getRequestID() + "</td><td>" + req.getAmount() + "</td><td>" +  
 					req.getReason() + "</td><td>" + reqStatus + "</td><td>" +  id + "</td></tr>");
 			}
-			pw1.println("</div><br><a href='/ERSProject/employeeOptions.html'>Go back.</a>");
+			pw1.println("</div><br><a href='/revatureProj1/employeeOptions.html'>Go back.</a>");
 		}
 		
 	}
@@ -108,7 +108,7 @@ public class RequestServlet extends HttpServlet {
 		Request req = new Request(0, amount, reason, resolved, id);
 		ers = ERSService.getERSService();
 		ers.submitRequest(req, id);
-		response.getWriter().println("Request submitted! <a href='/ERSProject/employeeOptions.html'>"
+		response.getWriter().println("Request submitted! <a href='/revatureProj1/employeeOptions.html'>"
 				+ "Go back.</a>");
 	}
 }

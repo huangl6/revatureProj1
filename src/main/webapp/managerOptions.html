@@ -12,14 +12,14 @@
 	<button onclick="showViewInfo()">View Information</button><br>
 	<button onclick="showUpdateInfo()">Update Information</button><br>
 	<button onclick="addEmployee()">Add an Employee</button><br>
-	<form action="/ERSProject/InfoServlet">
+	<form action="/revatureProj1/InfoServlet">
 		<button type="submit" name="viewAll">View All Employees</button>
 	</form>
-	<form action="/ERSProject/RequestServlet">
+	<form action="/revatureProj1/RequestServlet">
 		<button type="submit" name="viewAll">View All Requests</button>
 	</form>
 	<button onclick="viewChangeReqStatus()">Change Request Status</button>
-	<form action = "/ERSProject/login.html">
+	<form action = "/revatureProj1/login.html">
 		<input type="submit" value="Logout">
 	</form>
 
@@ -35,7 +35,7 @@ function showSubmitRequest() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/submitRequest.html", true);
+	  xhr.open("GET", "/revatureProj1/submitRequest.html", true);
 	  xhr.send();
 	}
 
@@ -46,7 +46,7 @@ function showViewRequest() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/viewRequest.html", true);
+	  xhr.open("GET", "/revatureProj1/viewRequest.html", true);
 	  xhr.send();
 	}
 	
@@ -57,7 +57,7 @@ function showViewInfo() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/viewInfo.html", true);
+	  xhr.open("GET", "/revatureProj1/viewInfo.html", true);
 	  xhr.send();
 	}
 	
@@ -68,7 +68,7 @@ function showUpdateInfo() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/submitInfo.html", true);
+	  xhr.open("GET", "/revatureProj1/submitInfo.html", true);
 	  xhr.send();
 	}
 
@@ -79,7 +79,7 @@ function showViewAllEmps() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/viewAllEmps.html", true);
+	  xhr.open("GET", "/revatureProj1/viewAllEmps.html", true);
 	  xhr.send();
 	}
 	
@@ -90,7 +90,7 @@ function viewChangeReqStatus() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/changeReqStatus.html", true);
+	  xhr.open("GET", "/revatureProj1/changeReqStatus.html", true);
 	  xhr.send();
 	}
 function addEmployee(){
@@ -100,7 +100,7 @@ function addEmployee(){
 		     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhr.open("GET", "/ERSProject/addEmployee.html", true);
+	  xhr.open("GET", "/revatureProj1/addEmployee.html", true);
 	  xhr.send();
 	}
 </script>

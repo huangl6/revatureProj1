@@ -10,7 +10,7 @@
 	<button onclick="showViewRequest()">View My Requests</button><br>
 	<button onclick="showViewInfo()">View Information</button><br>
 	<button onclick="showUpdateInfo()">Update Information</button><br>
-	<form action = "/ERSProject/login.html">
+	<form action = "/revatureProj1/login.html">
 		<input type="submit" value="Logout">
 	</form>
 	<div id="panel"></div>
@@ -23,7 +23,7 @@ function showSubmitRequest() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhttp.open("GET", "/ERSProject/submitRequest.html", true);
+	  xhttp.open("GET", "/revatureProj1/submitRequest.html", true);
 	  xhttp.send();
 }
 
@@ -34,7 +34,7 @@ function showViewRequest() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhttp.open("GET", "/ERSProject/viewRequest.html", true);
+	  xhttp.open("GET", "/revatureProj1/viewRequest.html", true);
 	  xhttp.send();
 }
 	
@@ -45,7 +45,7 @@ function showViewInfo() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhttp.open("GET", "/ERSProject/viewInfo.html", true);
+	  xhttp.open("GET", "/revatureProj1/viewInfo.html", true);
 	  xhttp.send();
 }
 	
@@ -56,7 +56,7 @@ function showUpdateInfo() {
 	     document.getElementById("panel").innerHTML = this.responseText;
 	    }
 	  };
-	  xhttp.open("GET", "/ERSProject/submitInfo.html", true);
+	  xhttp.open("GET", "/revatureProj1/submitInfo.html", true);
 	  xhttp.send();
 }
 </script>

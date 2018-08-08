@@ -34,7 +34,7 @@ public class InfoServlet extends HttpServlet {
 				+ "</td><td>" + emp.getUsername() + "</td><td>" + emp.getPassword() + "</td><td>" + emp.isManager() + "</tr>");
 			}
 			
-			pw1.println("</table></div><br><a href='/ERSProject/managerOptions.html'>Go back.</a>");
+			pw1.println("</table></div><br><a href='/revatureProj1/managerOptions.html'>Go back.</a>");
 		}
 		
 		else {
@@ -47,7 +47,7 @@ public class InfoServlet extends HttpServlet {
 			pw1.println("<table><tr><th>EmployeeID</th><th>Name</th><th>Email</th><th>Username</th><th>Password</th><th>Manager?</th></tr>");
 			pw1.println("<tr><td>" + emp.getEmpID() + "</td><td>" + emp.getName() + "</td><td>" + emp.getEmail() 
 			+ "</td><td>" + emp.getUsername() + "</td><td>" + emp.getPassword() + "</td><td>" + emp.isManager() + "</tr>");
-			pw1.println("</table></div><br><a href='/ERSProject/employeeOptions.html'>Go back.</a>");
+			pw1.println("</table></div><br><a href='/revatureProj1/employeeOptions.html'>Go back.</a>");
 		}
 		
 	}
@@ -62,6 +62,6 @@ public class InfoServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("empID"));
 		ers = ERSService.getERSService();
 		ers.changeInfo(name, email, us, pw, id);
-		pw1.println("</table></div><br><a href='/ERSProject/employeeOptions.html'>Go back.</a>");
+		pw1.println("</table></div><br><a href='/revatureProj1/employeeOptions.html'>Go back.</a>");
 	}
 }
