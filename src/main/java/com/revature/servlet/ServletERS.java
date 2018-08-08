@@ -47,7 +47,7 @@ public class ServletERS extends HttpServlet {
 	        BasicConfigurator.configure();
 		}
 		else {
-			response.sendRedirect("/revatureProj1/login.html");
+			RequestDispatcher rd = request.getRequestDispatcher("/revatureProj1/employeeOptions.html");
 		}	
 	}
 
