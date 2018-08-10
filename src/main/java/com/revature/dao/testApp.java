@@ -16,7 +16,7 @@ public class testApp {
 //		Request(int requestID, int amount, String reason, boolean resolved, int empID)
 		Employee e = new Employee (0, "tim", "tim@mail.com", "tim", "tim", false);
 		boolean adder = ERSService.addEmployee(e);
-		System.out.println(adder);
+//		System.out.println(adder);
 //		Request r = new Request(0, 10, "asdf", 1, 61);
 //		boolean submitted = ERSService.submitRequest(r,  61);
 //		System.out.println(submitted);
